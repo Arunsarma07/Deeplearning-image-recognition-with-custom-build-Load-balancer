@@ -16,9 +16,9 @@ from queue import Queue
 #Logger
 logger = logging.getLogger(__name__)
 #SQS resource from boto3 module
-sqs = boto3.resource('sqs', region_name = 'us-east-1', aws_access_key_id ="AKIAUTT6KPEIN7ZF4YPC", aws_secret_access_key ="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")
+sqs = boto3.resource('sqs', region_name = 'us-east-1', aws_access_key_id ="XXXXXXXXXXXXXXX", aws_secret_access_key ="XXXXXXXXXXXXX")
 #EC2 resource from boto3 module
-ec2 = boto3.client('ec2', 'us-east-1', aws_access_key_id ="AKIAUTT6KPEIN7ZF4YPC", aws_secret_access_key ="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")
+ec2 = boto3.client('ec2', 'us-east-1', aws_access_key_id ="XXXXXXXXXXXXXXX", aws_secret_access_key ="XXXXXXXXXXXXX")
 #Fetching the SQS queue name to read the response queue
 sqs_queue = sqs.get_queue_by_name(QueueName ='response_queue')
 q = Queue()
@@ -166,8 +166,8 @@ def stop_instance(instance_id):
 def fetch_queue_information():
     client = boto3.client('sqs',
     region_name = 'us-east-1', 
-    aws_access_key_id ="AKIAUTT6KPEIN7ZF4YPC", 
-    aws_secret_access_key ="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")
+    aws_access_key_id ="XXXXXXXXXXXXX", 
+    aws_secret_access_key ="XXXXXXXXXXXXX")
 
     response = client.get_queue_attributes(
         QueueUrl='https://sqs.us-east-1.amazonaws.com/317018765584/request_queue',
