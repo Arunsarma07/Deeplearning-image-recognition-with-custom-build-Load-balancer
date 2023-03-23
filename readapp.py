@@ -10,7 +10,7 @@ import logging
 import os
 
 #SQS resource
-sqs = boto3.resource('sqs', region_name = 'us-east-1', aws_access_key_id ="AKIAUTT6KPEIN7ZF4YPC", aws_secret_access_key ="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")
+sqs = boto3.resource('sqs', region_name = 'us-east-1', aws_access_key_id ="XXXXXXXXXXXXX", aws_secret_access_key ="XXXXXXXXXXXXX")
 queue = sqs.get_queue_by_name(QueueName="request_queue")
 logger = logging.getLogger(__name__)
 #S3 Client
